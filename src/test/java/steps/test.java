@@ -25,7 +25,7 @@ public class test {
 
     @When("^user navigates to Login page$")
     public void user_navigates_to_Login_page(){
-        //test
+        //test test
         driver.findElement(By.linkText("Sign in")).click();
     }
 
