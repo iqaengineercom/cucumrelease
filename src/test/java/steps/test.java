@@ -25,6 +25,7 @@ public class test {
 
     @When("^user navigates to Login page$")
     public void user_navigates_to_Login_page(){
+        //test
         driver.findElement(By.linkText("Sign in")).click();
     }
 
@@ -32,6 +33,8 @@ public class test {
     public void user_enters_username_and_password(){
         WebElement email = driver.findElement(By.id("email"));
         WebElement password = driver.findElement(By.id("passwd"));
+        email.clear();
+        password.clear();
         email.sendKeys("blog.cucumber@gmail.com");
         password.sendKeys("Cucumber@blog");
         driver.findElement(By.id("SubmitLogin")).click();
