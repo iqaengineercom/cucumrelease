@@ -7,9 +7,9 @@ Feature: Negative scenario
     Then Validation message
     When User fills incorrect login and correct password
     And  Click on Sign in button
-    Then Validation message
+    Then Validation message for incorrect login
     When User fills correct login snd incorrect password
     And  Click on Sign in button
-    Then Validation message
+    Then Validation message for incorrect password
 
 

@@ -25,7 +25,7 @@ public class test {
 
     @When("^user navigates to Login page$")
     public void user_navigates_to_Login_page(){
-        //test test
+        //test test test2
         driver.findElement(By.linkText("Sign in")).click();
     }
 
@@ -45,5 +45,20 @@ public class test {
         String actual = driver.findElement(By.cssSelector(".info-account")).getText();
         Assert.assertEquals(exp_message,actual);
         driver.quit();
+
+        WebElement block = driver.findElement(By.xpath("//form[@id='login_form']"));
+        if (block.isDisplayed()){
+            System.out.println("Block is displayed on screen");
+        }
+        else{
+            System.out.println("Block is hided");
+            driver.quit();
+        }
+
+        String currentURl = driver.getCurrentUrl();
+        String exp  ="http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation";
+        Assert.assertEquals(exp, currentURl);
+
+
     }
 }
